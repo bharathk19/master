@@ -7,9 +7,11 @@ public class AppFunction {
     {
         ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");
         context.refresh();
-        Coatch coatch=context.getBean("mycoach",Coatch.class);
+        CricketCoatch coatch=context.getBean("mycoach",CricketCoatch.class);
         System.out.println(coatch.DailyWorkout());
-        System.out.printf(coatch.DailyFortune());
+        System.out.println(coatch.DailyFortune());
+        System.out.println(coatch.getEmailAddress());
+        System.out.println(coatch.getTeam());
         context.close();
     }
 }

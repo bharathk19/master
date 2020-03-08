@@ -6,11 +6,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<context:property-placeholder location="classpath:sport.properties" />
 
-    <bean id="mycoach"  class="com.practise.BaseBallCoatch">
-        <constructor-arg ref="myfortune" />
+    <bean id="mycoach"  class="com.practise.CricketCoatch">
+      <!--    <constructor-arg ref="myfortune" /> -->
+      <property name="FortuneService" ref="myfortune" />
+        <property name="Team" value="${foo.team}" />
+        <property name="emailAddress" value="${foo.email}" />
     </bean>
 
     <bean id="myfortune" class="com.practise.HappyFortuneService" />
+
 
 </beans>
