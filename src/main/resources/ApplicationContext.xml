@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="mycoach"  class="com.practise.CricketCoatch">
+    <bean id="mycoach"  class="com.practise.BaseBallCoatch">
         <constructor-arg ref="myfortune" />
     </bean>
 
