@@ -9,6 +9,7 @@ public class AppFunction {
         context.refresh();
         Coatch coatch=context.getBean("mycoach",Coatch.class);
         System.out.println(coatch.DailyWorkout());
+        System.out.printf(coatch.DailyFortune());
         context.close();
     }
 }

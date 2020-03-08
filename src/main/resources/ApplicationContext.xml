@@ -8,8 +8,9 @@
 
 
     <bean id="mycoach"  class="com.practise.CricketCoatch">
+        <constructor-arg ref="myfortune" />
     </bean>
 
-
+    <bean id="myfortune" class="com.practise.HappyFortuneService" />
 
 </beans>
