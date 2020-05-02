@@ -11,7 +11,7 @@ public class OperationFactory {
         operatnionMap.put("Add",new Additon());
         operatnionMap.put("Multiply",new Multiply());
     }
-    private static Optional<Operation> getOperation(String operator){
+    static Optional<Operation> getOperation(String operator){
             return Optional.ofNullable(operatnionMap.get(operator));
     }
 }
